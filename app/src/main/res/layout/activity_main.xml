@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="30dp"
+        android:text="Convertidor de grados"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/etC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="38dp"
+        android:text="C°"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvF"
+        app:layout_constraintEnd_toStartOf="@+id/etC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="35dp"
+        android:text="F°"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvK"
+        app:layout_constraintEnd_toStartOf="@+id/etF"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvC" />
+
+    <TextView
+        android:id="@+id/tvK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="62dp"
+        android:text="K°"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGC"
+        app:layout_constraintEnd_toStartOf="@+id/etK"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvF" />
+
+    <EditText
+        android:id="@+id/etC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:hint="Celcius"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/etF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvC"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <EditText
+        android:id="@+id/etF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:hint="Fahrenheit"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/etK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvF"
+        app:layout_constraintTop_toBottomOf="@+id/etC" />
+
+    <EditText
+        android:id="@+id/etK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:hint="Kelvin"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvK"
+        app:layout_constraintTop_toBottomOf="@+id/etF" />
+
+    <Button
+        android:id="@+id/btnGC"
+        android:layout_width="96dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="321dp"
+        android:text="°C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etK" />
+
+    <Button
+        android:id="@+id/btnGF"
+        android:layout_width="96dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="320dp"
+        android:text="°F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGK"
+        app:layout_constraintStart_toEndOf="@+id/btnGC"
+        app:layout_constraintTop_toBottomOf="@+id/etK" />
+
+    <Button
+        android:id="@+id/btnGK"
+        android:layout_width="96dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="321dp"
+        android:text="°K"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGF"
+        app:layout_constraintTop_toBottomOf="@+id/etK" />
+</androidx.constraintlayout.widget.ConstraintLayout>
